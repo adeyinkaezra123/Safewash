@@ -1,0 +1,311 @@
+<!-- WRITTEN BY EZRA ADEYINKA -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safewash-Distributors</title>
+    <link rel="stylesheet" href="../test.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="select.css">
+
+    <link rel="icon" href="../assets/logo.png">
+    <!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header" class="header animate__animated animate__bounce">
+        <a href="#" class="logo"><img src="../assets/logo.png" alt=""></a>
+
+        <div class="container">
+            <div class="section"></div>
+            
+            <ul class="toggle">
+                <li></li>
+                <li></li>
+                <li></li>
+                <svg id="menu" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" color="#483d3f" height="2.25rem" width="2.25rem" xmlns="http://www.w3.org/2000/svg" style="color: rgb(72, 61, 63);"><title>Menu Icon</title><path d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" fill="currentColor"></path><path d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" fill="currentColor"></path><path d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" fill="currentColor"></path></svg>
+
+            </ul>
+            
+            <div class="fullscreen_menu" id="fullscreen_menu">
+                <ul class="menu">
+                    <li><a href="../index.html" class="nav__link">Home</a></li>
+                    <li><a href="#about" class="nav__link">About Us</a></li>
+                    <li><a href="#distr" class="nav__link">Become a Distributor</a></li>
+                    <li><a href="#contact" id='contact' class="nav__link">Contact</a></li>
+                </ul> 
+            </div>
+        </div>
+    </header>
+
+
+    <!-- BANNER -->
+   <section class="section__search">
+
+        <div class="search__heading">
+            <h4 class="">Find Distributors Around You</h4>
+            <div class="dropdown" id="sort">
+                    <div class="select">
+                    <span class="span">Sort</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    
+                    <ul class="dropdown-menu">
+                        
+                    <li id="male">Male</li>
+                    <li id="female">Male</li>
+                    </ul>
+                </div>
+        </div>
+        <form action="" class="dist__form">
+            <div class="dropdown" id="town">
+                    <div class="select">
+                    <span class="span">Select State</span>
+                    <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input type="hidden" name="gender">
+                    
+                    <ul class="dropdown-menu">
+                        
+                    <li id="male">Male</li>
+                    <li id="female">Female</li>
+                    </ul>
+                </div>
+
+
+            <div class="dropdown" id="state">
+                    <div class="select">
+                    <span class="span">Select State</span>
+                    <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input type="hidden" name="gender">
+                    
+                    <ul class="dropdown-menu">
+                        
+                    <li id="male">Male</li>
+                    <li id="female">Female</li>
+                    </ul>
+                </div>
+
+            <button class="search__button" id="search-btn">Search</button>
+            
+        </form>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+  /*Dropdown Menu*/
+$('.dropdown').click(function () {
+        $(this).attr('tabindex', 1).focus();
+        $(this).toggleClass('active');
+        $(this).find('.dropdown-menu').slideToggle(300);
+    });
+    $('.dropdown').focusout(function () {
+        $(this).removeClass('active');
+        $(this).find('.dropdown-menu').slideUp(300);
+    });
+    $('.dropdown .dropdown-menu li').click(function () {
+        $(this).parents('.dropdown').find('span').text($(this).text());
+        $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+    });
+/*End Dropdown Menu*/
+
+
+$('.dropdown-menu li').click(function () {
+  var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+      msg = '<span class="msg">Hidden input value: ';
+  $('.msg').html(msg + input + '</span>');
+}); 
+</script>
+    </section>
+
+    
+    <!-- TOP DISTRIBUTORS -->
+            <section id="top-distributors" style="display: none;">
+                <div class="container1">
+                    <h3 style="float: left;">Search Results</h3>
+                    
+                    
+                    
+                    <div class="top-distributors__cards">
+                        <div class="distributors-card__item">
+                            <div class="distributor-img">
+                                <img src="../assets/kudirat.png" alt="Kudirat Bakare">
+                            </div>
+                            
+                            <h4>Kudirat Bakare</h4>
+                            
+                            <p>Surulere, Lagos State. <br> 09030267295</p>
+                            
+                            <a href="https://wa.me/2349030267295?text=Hello%2C%20I%20would%20like%20to%20get%20a%20bottle%20of%20Safewash%20Liquid%20Detergent%21" target="blank">Contact</a>
+                        </div>
+
+                        <div class="distributors-card__item">
+                            <div class="distributor-img">
+                                <img src="../assets/ibikunle.png" alt="Ibikunle Ventures">
+                            </div>
+                            
+                            <h4>Ibikunle Ventures</h4>
+                            
+                            <p>Surulere, Lagos State. <br> 09030267295</p>
+                            
+                            <a href="https://wa.me/2349030267295?text=Hello%2C%20I%20would%20like%20to%20get%20a%20bottle%20of%20Safewash%20Liquid%20Detergent%21"  target="blank">Contact</a>
+                        </div>
+
+                        <div class="distributors-card__item">
+                            <div class="distributor-img">
+                                <img src="../assets/rosemerry.png" alt="Rosemerry’s Shop">
+                            </div>
+                            
+                            <h4>Rosemerry’s Shop</h4>
+                            
+                            <p>Surulere, Lagos State. <br> 09030267295</p>
+                            
+                            <a href="https://wa.me/2349030267295?text=Hello%2C%20I%20would%20like%20to%20get%20a%20bottle%20of%20Safewash%20Liquid%20Detergent%21" target="blank">Contact</a>
+
+                        </div>
+
+                        <!-- PINK BLUR -->
+                        <div class="top-distributors__blur-bg"></div>
+
+                        <!-- BUBBLES -->
+                        <div class="top-distributors__bubbles">
+                            <img src="../assets/bubbles-1.svg" alt="Bubble 1">
+                            <img src="../assets/bubbles-2.svg" alt="Bubble 2">
+                            <img src="../assets/bubbles-3.svg" alt="Bubble 3">
+                        </div>
+                    </div>
+                    
+                    <a href="#"style="float:left; color:rgba(33, 164, 196, 1)!important;" ><p class="centered-text">View more results</p></a>
+                    
+                </div>
+            </section>
+<!--    CONTACT MODAL    -->
+    <div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal" id="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="login-box">
+            <span class="close">&times;</span>
+
+            <h2>Get In Touch</h2>
+            <form action="mailto:adeyinkaezra123@gmail.com" method="get" enctype="text/plain" class="contact__form"required>
+
+                <div class="user-box">
+                    <input type="text" required>
+                    <label>Name</label>
+                </div>
+
+                <div class="user-box">
+                    <input id="emailAddress" type="mail" required>
+
+                    <label>Email</label>
+                </div>
+
+                <div class="user-box">
+                    <input type="tel" name="Phone" required>
+                    <label>Phone</label>
+                </div>
+
+                <div class="user-box">
+                    <input class="message" name="" required>
+                    <label>Message</label>
+                </div>
+
+                <div class="submit">
+                    <a href="">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <!-- Submit -->
+                        <input type="submit" value="SUBMIT" class="submit-button">
+
+                    </a>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-group__container">
+                <ul class="footer-group">
+                    <img class="footer-logo" src="assets/bq-dark-big-1@2x.png" alt="">
+
+                </ul>
+                <ul class="footer-group">
+                    <li class="footer-group__header">customer service</li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Become a Distributor</a></li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Ordering and Payment</a></li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Delivery and return policies</a></li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">FAQ</a></li>
+                    <li class="footer-group__item"><a href="#" class="footer-group__link">Go to Top
+    </a></li>
+                </ul>
+                <ul class="footer-group">
+                    <li class="footer-group__header">About Safewash</li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">About us</a></li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Work with Us</a></li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Privacy Policy
+    </a></li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Terms and condition</a></li>
+                </ul>
+                <ul class="footer-group">
+                    <li class="footer-group__header">Contact</li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Contact us</a></li>
+                    <li class="footer-group__item"><a href="../Comingsoon/index.html" class="footer-group__link">Safewash brands</a></li>
+                    <li class="footer-group__item"><a href="tel:+23456778889996" class="footer-group__link">+23456778889996</a></li>
+                    <li class="footer-group__item"><a href="mailto:safewash@gmail.com
+    " class="footer-group__link">safewash@gmail.com
+    </a></li>
+                    <div class="footer-icons">
+                        <a href="https://instagram.com"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="https://twitter.com"><i class='bx bxl-twitter' ></i></a>
+                        <a href="https://facebook.com"><i class='bx bxl-facebook-square' ></i></a>
+                        <a href="https://linkedin.com"><img src="assets/Vector.png" alt=""></a>
+                    </div>
+                </ul>
+                <ul class="footer-group">
+                    <li class="footer-group__header">Sign up to our newsletter</li>
+                    <p class="footer-group__lead">Get the first looks at new drops,events,sales & offers</p>
+                    <label for="subscribe" class="visually-hidden">Enter your email address</label>
+                    <input id="subscribe" type="email" placeholder="Enter your email address" class="footer-group__input" required>
+                    <input type="button" value="Subscribe" class="footer-group__submit">
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+        <div class="footer-footnote">
+            <div class="footnote__copyright">&copy; bqsafewash 
+                <script>document.write(new Date().getFullYear())</script> 
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="select.js"></script>
+    <!-- SCROLL REVEAL -->
+</body>
+</html>

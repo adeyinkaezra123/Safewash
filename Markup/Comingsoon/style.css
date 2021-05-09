@@ -1,0 +1,333 @@
+    * {
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.comingSoon {
+	z-index: 999;
+	position: relative;
+	/* height: 100vh; */
+	/* width: 95%;
+	top: 15em; */
+	left: 2em;
+  margin-bottom: 0;
+}
+
+.comingSoon h1 {
+	font-weight: 700;
+	color: #efefef;
+	font-size: 3em;
+	margin-bottom: 0.6em;
+	margin: 0 0 0.6em 0;
+}
+
+.comingSoon p {
+	font-size: 1.25em;
+	color: #c9cbca;
+	width: 45%;
+	line-height: 1.2em;
+	margin: 0 0 1.5em 0;
+}
+
+.comingSoon .box {
+	background-color: #1cb495;
+	border-radius: 6px;
+	border: 0;
+	color: #efefef;
+	display: inline-block;
+	font-weight: 700;
+	height: 2.8em;
+	line-height: 2.75em;
+	padding: 0 1.125em;
+	margin-right: 1.5em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	-moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.comingSoon .box:hover {
+	background-color: #1fcaa7;
+}
+
+.footer {
+
+  margin-top: 2rem;
+  margin-left: -2rem;
+  margin-bottom: 4rem;
+	display: block;
+	color: #0E2431;
+	opacity: 0.3;
+	-moz-transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+.footer:hover {
+	opacity: 1;
+}
+
+.footer a {
+	text-decoration: none;
+	color: #0E2431;
+	-moz-transition: 0.2s ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+
+.footer ul {
+	list-style: none;
+}
+
+.footer .icons {
+	margin: 0 0 0.5em 0;
+}
+
+.icons li {
+	display: inline-block;
+	padding: 0 1em 0 0;
+	font-size: 1.125em;
+}
+
+.icons a {
+	-moz-transition: 0.2s ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+
+.icons a:hover{
+	color: #1fcaa7;
+}
+
+@media screen and (max-width: 480px) {
+	.comingSoon {
+		top: 2em;
+	}
+
+	.comingSoon h1 {
+		font-size: 2em;
+	}
+
+	.comingSoon p {
+		width: 85%;
+		font-size: 1.125em;
+		line-height: 1.25em;
+	}
+
+	.comingSoon a {
+		width: 72%;
+		margin-bottom: 20px;
+	}
+}
+
+.animate__animated.animate__shakeX {
+  --animate-duration:1.2s;
+}
+
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  overflow: hidden;
+  /* background: url("file:///C:/Users/Adeyinka/Desktop/FOR%20DOTUN/Safewash/Markup/assets/coming-soon.png") no-repeat 0.3; */
+
+  background-size: cover;
+  background-position: center;
+}
+::selection{
+  color: #fff;
+  background: #1cb495;
+}
+.modal-wrapper{
+  position: relative;
+    margin:0;
+  padding:0;
+  display: none;
+  top: -12vw;
+  /* background: linear-gradient(#141e30, #243b55); */
+}
+.modal{
+  top: 10vw;
+  position: relative;
+  padding: 20px;
+  margin: 0;
+  /* width: 90vw; */
+  height: 70vw;
+background: #02AAB0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00CDAC, #02AAB0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 520px;
+    box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  max-width: 900px;
+  
+}
+
+
+.close {
+  color: #fff;
+  float: right;
+  outline: 0;
+  position: relative;
+  right: 3%;
+  top: 3%;
+ 
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  background: 0;
+  padding: 0;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  transform: scale(1.5); 
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wrapper{
+
+  font-family: 'Poppin', sans-serif;
+  margin: 10% 0 ;
+  color: #fff;
+
+
+  text-align: center;
+  padding: 0 50px;
+    -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+.wrapper .title{
+  font-size: 2rem;
+  font-weight: 500;
+}
+.wrapper .title span{
+  font-weight: 700;
+}
+.wrapper form{
+  margin: 50px 0;
+}
+.wrapper form .email-field{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .email-field input{
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  font-size: 18px;
+  border: 1px solid;
+}
+form .email-field button{
+  height: 100%;
+  width: 200px;
+  outline: none;
+  border: none;
+  background: #1cb495;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+form .email-field button:hover{
+  background: #1fcaa7;
+}
+.wrapper .count-down{
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrapper .count-down .timer{
+  height: 100%;
+  width: 100px;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.count-down .timer .numb{
+  font-size: 25px;
+  font-weight: 500;
+}
+.count-down .timer .text{
+  font-size: 15px;
+}
+.count-down .clone{
+  font-size: 45px;
+}
+@media (max-width: 630px) {
+  .wrapper .count-down{
+    height: 80px;
+  }
+  .wrapper .count-down .timer{
+    width: 80px;
+  }
+  .count-down .timer .numb{
+    font-size: 20px;
+  }
+  .count-down .timer .text{
+    font-size: 13px;
+  }
+  .count-down .clone{
+    font-size: 40px;
+  }
+}
+@media (max-width: 542px){
+  .wrapper{
+    padding: 40px 20px 20px;
+  }
+  .wrapper .count-down .timer{
+    border: none;
+  }
+  .count-down .timer .numb{
+    font-size: 1rem;
+  }
+  .count-down .timer .text{
+    font-size: 15px;
+  }
+  .form .email-field button{
+    width: 150px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 340px){
+  .wrapper .count-down{
+    height: 30px;
+  }
+  .wrapper .count-down .timer{
+    width: 30px;
+  }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Coming Soon Page | Safewash</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- IBM Plex Sans -->
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400,500,600,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body id="body"  class="animate__animated animate__bounceInUp animate__delay-2s">
+
+    <div class="modal-wrapper" id="myModal">
+            <div class="modal" >
+    <span id="close" class="close">&times;</span>
+    <div class="wrapper">
+      
+      <div class="title">Our website is <span>Coming soon</span>, follow us <br> for update now!</div>
+      <h6>Built with ❤️ by Ezra</h6>
+      <form action="#" class="form">
+        <div class="email-field animate__animated animate__shakeX animate__slower	3s ">
+          <input type="email" placeholder="Enter Email!" required>
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+      <div class="count-down">
+        <div class="timer day">
+          <div class="count">
+            <div class="numb">00</div>
+            <div class="text">Days</div>
+          </div>
+        </div>
+        <div class="clone">:</div>
+        <div class="timer hour">
+          <div class="count">
+            <div class="numb">00</div>
+            <div class="text">Hours</div>
+          </div>
+        </div>
+        <div class="clone">:</div>
+        <div class="timer min">
+          <div class="count">
+            <div class="numb">00</div>
+            <div class="text">Minutes</div>
+          </div>
+        </div>
+        <div class="clone">:</div>
+        <div class="timer sec">
+          <div class="count">
+            <div class="numb">00</div>
+            <div class="text">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <div class="comingSoon" id="comingSoon">
+			<h1>Under Construction</h1>
+			<p>Sorry for the dust! We know it’s taking a while but sit tight and we’ll be with you soon. <br><br>
+
+We’re working hard to make this website available again on Wednesday 24th April.
+
+In the meantime, Sign Up to Get the first looks at new drops,events,sales & offers.”</p>
+			<a class="box" href="../index.html">Home</a>
+			<a class="box" id="btn" href="#">Sign Up</a>
+    
+    <div class="footer">
+      <ul class="icons">
+        <li>
+          <a href="#" class="fab fa-twitter">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="fab fa-instagram">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="fab fa-facebook">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="far fa-envelope">
+          </a>
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>© Ezra Adeyinka</li>
+      </ul>
+	</div>
+  </div>
+
+    
+
+    <script>
+      const day = document.querySelector(".day .numb");
+      const hour = document.querySelector(".hour .numb");
+      const min = document.querySelector(".min .numb");
+      const sec = document.querySelector(".sec .numb");
+      var timer = setInterval(()=>{
+        var currentDate = new Date().getTime();
+        var launchDate = new Date('April 19, 2022 12:00:00').getTime();
+        var duration =launchDate - currentDate;
+        var days = Math.floor(duration / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((duration % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((duration % (1000 * 60)) / 1000);
+        day.innerHTML = days;
+        hour.innerHTML = hours;
+        min.innerHTML = minutes;
+        sec.innerHTML = seconds;
+        if(days < 10){
+          day.innerHTML = '0' + days;
+        }
+        if(hours < 10){
+          hour.innerHTML = '0' + hours;
+        }
+        if(minutes < 10){
+          min.innerHTML = '0' + minutes;
+        }
+        if(seconds < 10){
+          sec.innerHTML = '0' + seconds;
+        }
+        if(duration < 0){
+          clearInterval(timer);
+        }
+      }, 1000);
+
+
+    </script>
+    <script>
+            var modal = document.getElementById("myModal");
+            var come = document.getElementById('comingSoon')
+            var color = document.getElementById("body")
+            var element = document.querySelector('.modal-wrapper');
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("btn");
+
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+      modal.style.display = "block";
+      come.style.display = 'none'
+      color.style.background = "linear-gradient(#141e30, #243b55)"
+      element.classList.add('animate__animated', 'animate__backInDown');
+
+
+      }
+
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+        come.style.display = "block";
+        color.style.background = "#fff";
+        ;
+
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+  </body>
+</html>
