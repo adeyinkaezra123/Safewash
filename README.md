@@ -1,8 +1,4 @@
 # Safewash
-A Liquid Laundry Detergent Specifically Formulated for Babies and Children Clothing
-
-# ![Safewash](https://iharsh234.github.io/WebApp/images/demo/demo_landing.JPG)
-# Safewash
 <table>
 <tr>
 <td>
